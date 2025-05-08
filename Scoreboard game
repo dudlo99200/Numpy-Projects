@@ -1,0 +1,26 @@
+# Welcome to the Python coding playground
+# You're making a simple game scoreboard!
+# Tasks:
+# - Create an array of player scores
+# - Add new scores as players join
+# - Remove scores when players leave
+# - Split players into two teams
+
+import numpy as np
+
+# insert a new score after the 2nd score
+scores = np.array([85, 92, 78, 90])
+new = np.insert(scores,2,90)# Finish this line
+print("After inserting new score:",new)
+
+# Remove the 3rd score
+updated = np.delete(scores,2)# Finish this line
+print("After deleting a score:",updated)
+
+# Create a 2d array with the updated scores across levels
+scores_across_levels = np.array([updated, updated])
+print("Scores Across level:",scores_across_levels)
+
+# Remove the scores from the bottom level
+without_bottom_level = scores_across_levels[0]# Finish this line
+print("Scores without bottom level:",without_bottom_level)

@@ -1,0 +1,35 @@
+# Welcome to the Image Processing Exercise!
+# You'll be working with RGB image data.
+
+import numpy as np
+
+# 3D array representing a 4x4 RGB image
+# Each pixel has [R,G,B] values from 0-255
+image = np.array([
+    [[255, 0, 0], [255, 0, 0], [0, 255, 0], [0, 255, 0]],    # Row 1
+    [[255, 0, 0], [255, 0, 0], [0, 255, 0], [0, 255, 0]],    # Row 2
+    [[0, 0, 255], [0, 0, 255], [255, 255, 0], [255, 255, 0]], # Row 3
+    [[0, 0, 255], [0, 0, 255], [255, 255, 0], [255, 255, 0]]  # Row 4
+])
+
+# Your tasks:
+# 1. Get the RGB values of the pixel at position (1,2)
+pixel_rgb = image[1, 2]
+print(pixel_rgb)
+
+# 2. Get all red values from the first row
+first_row_red = image[0, :,0]
+print(first_row_red)
+
+# 3. Extract the 2x2 top-left corner of the image
+top_left = image[0:2,0:2]
+print(top_left)
+
+
+# 4. Get all blue values from the image
+all_blue = image[:, :, 2]
+print(all_blue)
+
+# 5. Extract the bottom-right pixel
+bottom_right = image[-1, -1]
+print(bottom_right)
